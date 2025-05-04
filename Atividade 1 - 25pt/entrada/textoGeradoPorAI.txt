@@ -1,4 +1,4 @@
-Linha 1: Este é um exemplo de texto para preencher o arquivo com pelo menos 1000 linhas.
+Linha 1: Este é um exemplo de texto para preencher o arquivo com pelo menos 50 linhas.
 Linha 2: Cada linha contém uma descrição simples e sequencial.
 Linha 3: O objetivo é criar um texto longo para testes ou demonstrações.
 Linha 4: Este texto pode ser usado para verificar o comportamento de programas.
