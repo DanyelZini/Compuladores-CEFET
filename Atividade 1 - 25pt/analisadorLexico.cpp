@@ -74,7 +74,7 @@ void salvarArquivo(const string nome_arquivo, const T dados)
         return;
     }
 
-    if constexpr (is_same_v<T, queue<string>>)
+    if constexpr(is_same_v<T, queue<string>>)
     {
         auto copia = dados;
         while (!copia.empty())
@@ -85,7 +85,7 @@ void salvarArquivo(const string nome_arquivo, const T dados)
     }
     else
     {
-        for (const auto &item : dados)
+        for (auto &item : dados)
         {
             saida << item << endl;
         }
