@@ -8,8 +8,7 @@ class GramaticaBNF:
         self.regras = {
             "pergunta_formato": (
             re.compile(r'Qual documento esta no (\w+)\?$'),
-            lambda m: f"Documentos no formato {m.group(1)}:\n\t" + 
-                "\n\t".join(self.pesquisa_doc(m.group(1))) if list(self.pesquisa_doc(m.group(1))) else "Nenhum documento encontrado."
+            lambda m: f"O formato e {m.group(1)}."
             ),
             "pergunta_tamanho": (
             re.compile(r'Qual tamanho tem (\w+)\?$'),
@@ -50,10 +49,6 @@ class GramaticaBNF:
             "resposta_pref_palavra": (
             re.compile(r'Prefiro documentos com (.+)\.$'),
             None
-            ),
-            "resposta_add_doc": (
-            re.compile(r'Adicionando documento: ([\w\-.]+)\.$'),
-            lambda m: documentos.append(m.group(1))
             )
         }
     

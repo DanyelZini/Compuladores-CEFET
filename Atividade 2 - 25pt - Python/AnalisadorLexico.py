@@ -7,7 +7,7 @@ class AnalisadorLexico:
         self.alfabeto = set('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
                             'áàâãéèêíìîóòôõúùûçÁÀÂÃÉÈÊÍÌÎÓÒÔÕÚÙÛÇ'
                             '!@#$%¨&*()_+-=[]{};:",./<>?\\| \t\n')
-        self.stopwords = {
+        self.stopwords = { ## https://gist.github.com/alopes/5358189
             'de', 'a', 'o', 'que', 'e', 'do', 'da', 'em', 'um', 'para', 'é', 
             'com', 'não', 'uma', 'os', 'no', 'se', 'na', 'por', 'mais', 'as', 
             'dos', 'como', 'mas', 'foi', 'ao', 'ele', 'das', 'tem', 'à', 'seu', 
