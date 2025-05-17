@@ -1,0 +1,43 @@
+<sentenca> ::= <pergunta> | <resposta>
+
+; -------------------------------
+; Perguntas do usuário e suas respostas esperadas
+; -------------------------------
+
+<pergunta> ::= "Qual documento está no" <formato> "?"
+             ; resposta: "O formato é" <formato> "."
+             | "Qual tamanho tem" <formato> "?"
+             ; resposta: "Quero tamanho maior que" <numero> "."
+             | "Qual documento tem" <titulo> "?"
+             ; resposta: "O título é" <titulo> "."
+             | "Quais documentos estão entre" <data> "e" <data> "?"
+             ; resposta: "O documento foi criado em" <data> "."
+             | "Existe documento com" <palavra_chave> "?"
+             ; resposta: "Prefiro documentos com" <palavra_chave> "."
+             | "Mostre documentos do tipo" <formato> "com tamanho maior que" <numero> "?"
+             ; resposta: "O formato é" <formato> ". Quero tamanho maior que" <numero> "."
+
+; -------------------------------
+; Respostas do usuário
+; -------------------------------
+
+<resposta> ::= "O formato é" <formato> "."
+             | "Quero tamanho maior que" <numero> "."
+             | "O título é" <titulo> "."
+             | "O documento está em" <formato> "."
+             | "O documento foi criado em" <data> "."
+             | "Prefiro documentos com" <palavra_chave> "."
+
+; -------------------------------
+; Terminais e não-terminais auxiliares
+; -------------------------------
+
+<formato> ::= "PDF" | "DOCX" | "TXT" | "HTML" | <outro_formato>
+<outro_formato> ::= <palavra>
+<titulo> ::= <palavra> { <palavra> }
+<palavra_chave> ::= <palavra> { <palavra> }
+<numero> ::= <digito> { <digito> }
+<data> ::= <digito> <digito> "/" <digito> <digito> "/" <digito> <digito> <digito> <digito>
+<palavra> ::= <letra> { <letra> }
+<letra> ::= "a" | "b" | ... | "z" | "A" | ... | "Z"
+<digito> ::= "0" | "1" | ... | "9"
