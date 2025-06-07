@@ -1,0 +1,23 @@
+<frase> ::= <pergunta> | <comando>
+
+<pergunta> ::= <interrogativo> <entidade>
+             | <interrogativo> <atributo>
+             | <verbo_demonstrar> <entidade> <atributo> <atributo>
+             | <verbo_demonstrar> <entidade>
+
+<comando> ::= <verbo_adicao> <entidade> <identificador> <atributo>
+
+<interrogativo> ::= "qual" | "quais" | "quem" | "quando" | "onde" | "como"
+
+<verbo_demonstrar> ::= "mostre" | "mostrar" | "existe" | "liste" | "encontre"
+                     | "busque" | "procure" | "apresente" | "exiba"
+
+<verbo_adicao> ::= "adicionar" | "adicione" | "insira" | "inclua"
+
+<entidade> ::= "documento" | "documentos" | "arquivo" | "arquivos"
+
+<atributo> ::= "tamanho" | "tipo" | "formato" | "nome" | "quantidade"
+
+<tipo> ::= "pdf" | "mp3" | "mp4" | "zip" | "rar" | "txt" | "doc"
+
+<identificador> ::= qualquer palavra que não seja palavra-chave, tipo nome de arquivo (ex: batata.pdf, relatorio)
